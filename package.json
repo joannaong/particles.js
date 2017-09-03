@@ -1,5 +1,5 @@
 {
-  "name": "particles.js",
+  "name": "@joannaong/particles.js",
   "version": "2.0.0",
   "description": "A lightweight JavaScript library for creating particles",
   "homepage": "http://vincentgarreau.com/particles.js",
@@ -18,8 +18,7 @@
   "author": "Vincent Garreau",
   "license": "MIT",
   "files": [
-    "particles.js",
-    "particles.min.js"
+    "particles.js"
   ],
   "bugs": {
     "url": "https://github.com/VincentGarreau/particles.js/issues"
