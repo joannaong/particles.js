@@ -1519,6 +1519,27 @@ window.particlesJS = function(tag_id, params){
 
 };
 
+window.particlesJS.destroy = function(tag_id) {
+	var pJSDomItem;
+	for (var item in pJSDom) {
+		if (pJSDom[item].tag_id == tag_id) {
+			pJSDomItem = pJSDom[item];
+			break;
+		}
+	}
+	if (pJSDomItem) {
+		pJSDom.splice(pJSDom.indexOf(pJSDomItem), 1);
+		if (pJSDomItem.pJS.fn.drawAnimFrame) {
+			cancelAnimationFrame(pJSDomItem.pJS.fn.drawAnimFrame);
+
+		}
+		if(pJSDomItem.pJS.fn.vendors.draw) {
+			cancelAnimationFrame(pJSDomItem.pJS.fn.vendors.draw)
+		}
+		pJSDomItem.pJS.canvas.el.remove();
+	}
+};
+
 window.particlesJS.load = function(tag_id, path_config_json, callback){
 
   /* load json config */
