@@ -31,6 +31,9 @@ Load particles.js and configure the particles:
 particlesJS.load('particles-js', 'assets/particles.json', function() {
   console.log('callback - particles.js config loaded');
 });
+
+// destroy
+particlesJS.destroy(<elementId>);
 ```
 
 **particles.json**
